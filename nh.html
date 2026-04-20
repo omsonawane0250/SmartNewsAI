@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="icon" href="logo2.jpg">
+    <title>News Times</title>
+
+    <link rel="stylesheet" 
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" 
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="hn.css">
+
+  </head>
+  <body>
+
+        <!-- HEADER -->
+
+    <header>
+
+      <div class="logo-box"><img src="logot.png" alt="News Times Logo">
+           
+
+        <div>
+          <h1>News Times</h1>
+          <p style="color: black; opacity: 0.5;">Your Trusted News Source</p>
+        </div>
+      </div>
+
+  
+
+      <div class="datetime" id="dateTime"></div>
+          
+
+    </header>
+
+
+
+      <nav class="navbar">
+        <div class="navc">
+            <ul>
+              <li onclick="filterNews('all')">All</li>
+              <li onclick="filterNews('india')">INDIA</li>
+              <li onclick="filterNews('world')">WORLD</li>
+              <li onclick="filterNews('sports')">SPORTS</li>
+              <li onclick="filterNews('education')">EDUCATION</li>
+              <li onclick="filterNews('live')">LIVE</li>
+            </ul>
+        </div>
+
+        <div class="navs">
+              <input type="text" id="search" placeholder="Search News...">
+        </div>
+      </nav>
+      
+      <!-- NEWS SECTION -->
+
+    <section class="news-container" id="newsContainer">
+
+
+              <!-- CARD 1 -->
+                 <div class="card" data-category="sports" >
+                                <img src="nh6.jpg">
+
+                                <h3>MI vs RCB, IPL 2026</h3>
+
+                                <p class="news" >
+                                 Mumbai Indians 146/4 (15); Duffy dismisses Hardik.Catch all the live updates and highlights from the IPL 2026 match between Mumbai Indians and Royal Challengers Bengaluru at the Wankhede Stadium, Mumbai, on Sunday, April 12.Mumbai Indians captain Hardik Pandya plays a shot during IPL Match MI VS RCB.</p>
+
+
+                          <div class="actions">
+
+
+                                <i class="fa-regular fa-heart " onclick="likeNews(this)" ></i>
+                                <i class="fa-solid fa-share-nodes"  onclick="shareNews(this)"></i>
+                                <i class="fa-solid fa-bookmark" onclick="saveNews(this)"></i>
+                                <a href="https://sportstar.thehindu.com/cricket/ipl/mi-vs-rcb-live-score-mumbai-indians-royal-challengers-bengaluru-ipl-2026-match-live-updates/article70853849.ece"
+                                  type="button" class="btn btn-outline-success rm">Read More</a>
+                          </div> 
+                           <button  class="ai-btn" onclick="getSummary(this)" style="background: linear-gradient(90deg,#ff7f50 , #d62828); color: white; border: none; padding: 8px 16px; border-radius: 2rem; cursor: pointer; font-weight: bold;">🧠 Summary</button>
+
+                            <p class="summary"></p>
+
+
+
+                          <div class="comment-box">
+
+                                <input type="text" placeholder="Write comment..." onkeypress="handleComment(event, this)">
+
+                                <div class="comments"></div>
+
+                          </div>
+
+                        </div>
+
+
+
+
+              <!-- CARD 2 -->
+      <div class="card" data-category="india" >
+                                <img src="https://th-i.thgim.com/public/incoming/3a2p5w/article70850387.ece/alternates/LANDSCAPE_1200/PTI04_09_2026_000453B.jpg">
+
+                                <h3>Modi says BJP will expose Trinamool corruption in West Bengal.</h3>
+
+                                <p class="news" >
+                                PM Modi said action will be taken against those involved in political violence.
+                                He assured strict steps to ensure law and order in West Bengal.  </p>
+
+
+                          <div class="actions">
+
+
+                                <i class="fa-regular fa-heart " onclick="likeNews(this)" ></i>
+                                <i class="fa-solid fa-share-nodes"  onclick="shareNews()"></i>
+                                <i class="fa-solid fa-bookmark" onclick="saveNews(this)"></i>
+
+                                <a href="https://www.thehindu.com/elections/assembly-elections-live-tamil-nadu-assam-west-bengal-kerala-puducherry-live-updates-april-11-2026/article70850064.ece"
+                                  type="button" class="btn btn-outline-success rm">Read More</a>
+                          </div> 
+                           <button  class="ai-btn" onclick="getSummary(this)" style="background: linear-gradient(90deg,#ff7f50 , #d62828); color: white; border: none; padding: 8px 16px; border-radius: 2rem; cursor: pointer; font-weight: bold;">🧠 Summary</button>
+
+                            <p class="summary"></p>
+
+
+
+                          <div class="comment-box">
+
+                                <input type="text" placeholder="Write comment..." onkeypress="handleComment(event, this)">
+
+                                <div class="comments"></div>
+
+                          </div>
+
+                        </div>
+
+
+              <!-- CARD 3 -->
+                <div class="card" data-category="education" >
+                                <img src="nh31.jpg">
+
+                                <h3>JEE Main 2026 Session 2: NTA addresses Chemistry answer key discrepancies</h3>
+
+                                <p class="news" >
+                                The National Testing Agency (NTA) is verifying the claims of JEE Main session two regarding the exam conducted on April 5. Taking cognisance of the issue, NTA has asked students not to make any payments related to challenges for the Chemistry section of the JEE session two until an official clarification is issued.</p>
+
+
+                          <div class="actions">
+
+
+                                <i class="fa-regular fa-heart " onclick="likeNews(this)" ></i>
+                                <i class="fa-solid fa-share-nodes"  onclick="shareNews()"></i>
+                                <i class="fa-solid fa-bookmark" onclick="saveNews(this)"></i>
+                                <a href="https://indianexpress.com/article/education/jee-main-2026-session-two-nta-issues-notice-on-chemistry-answer-key-discrepancies-jeemain-nta-nic-in-10632037/"
+                                  type="button" class="btn btn-outline-success rm">Read More</a>
+                          </div> 
+                           <button  class="ai-btn" onclick="getSummary(this)" style="background: linear-gradient(90deg,#ff7f50 , #d62828); color: white; border: none; padding: 8px 16px; border-radius: 2rem; cursor: pointer; font-weight: bold;">🧠 Summary</button>
+
+                            <p class="summary"></p>
+
+
+
+                          <div class="comment-box">
+
+                                <input type="text" placeholder="Write comment..." onkeypress="handleComment(event, this)">
+
+                                <div class="comments"></div>
+
+                          </div>
+
+                        </div> 
+
+        <!-- CARD 4 -->
+                <div class="card" data-category="india" >
+                                <img src="nh4.jpg">
+
+                                <h3>RBI proposes Kill Switch to secure digital payments</h3>
+
+                                <p class="news" >
+                                The Reserve Bank of India (RBI) has proposed a Kill Switch mechanism to enhance the security of digital payments. The move is expected to further reduce online fraud. According to the National Cyber Crime Reporting Portal (NCRP), around 28 lakh digital payment fraud cases were reported in 2025, amounting to Rs 22,931 crore.</p>
+
+
+                          <div class="actions">
+
+
+                                <i class="fa-regular fa-heart " onclick="likeNews(this)" ></i>
+                                <i class="fa-solid fa-share-nodes"  onclick="shareNews()"></i>
+                                <i class="fa-solid fa-bookmark" onclick="saveNews(this)"></i>
+                                <a href="https://indianexpress.com/article/india/rbi-proposes-kill-switch-to-secure-digital-payments-what-it-means-10632812/"
+                                  type="button" class="btn btn-outline-success rm">Read More</a>
+                          </div> 
+                           <button  class="ai-btn" onclick="getSummary(this)" style="background: linear-gradient(90deg,#ff7f50 , #d62828); color: white; border: none; padding: 8px 16px; border-radius: 2rem; cursor: pointer; font-weight: bold;">🧠 Summary</button>
+
+                            <p class="summary"></p>
+
+
+
+                          <div class="comment-box">
+
+                                <input type="text" placeholder="Write comment..." onkeypress="handleComment(event, this)">
+
+                                <div class="comments"></div>
+
+                          </div>
+
+                        </div>        
+
+        <!-- CARD 5 -->
+
+                <div class="card" data-category="world" >
+                                <img src="nh5.avif">
+
+                                <h3>Iran-US Ceasefire Talks In Islamabad LIVE</h3>
+                                <p class="news" >
+                               Pakistan is hosting key talks between the United States and Iran in Islamabad as efforts continue to end the ongoing Gulf conflict. An Iranian delegation led by Mohammad-Bagher Ghalibaf has arrived in the capital, while the US side is being led by Vice President JD Vance.</p>
+
+
+                          <div class="actions">
+
+
+                                <i class="fa-regular fa-heart " onclick="likeNews(this)" ></i>
+                                <i class="fa-solid fa-share-nodes"  onclick="shareNews()"></i>
+                                <i class="fa-solid fa-bookmark" onclick="saveNews(this)"></i>
+                                <a href="https://www.icc-cricket.com/tournaments/mens-t20-world-cup-2026/news/live-india-new-zealand-chase-world-cup-glory"
+                                  type="button" class="btn btn-outline-success rm">Read More</a>
+                          </div> 
+                           <button  class="ai-btn" onclick="getSummary(this)" style="background: linear-gradient(90deg,#ff7f50 , #d62828); color: white; border: none; padding: 8px 16px; border-radius: 2rem; cursor: pointer; font-weight: bold;">🧠 Summary</button>
+
+                            <p class="summary"></p>
+
+
+
+                          <div class="comment-box">
+
+                                <input type="text" placeholder="Write comment..." onkeypress="handleComment(event, this)">
+
+                                <div class="comments"></div>
+
+                          </div>
+
+                        </div> 
+
+        <!-- CARD 6 -->
+                  <div class="card" data-category="sports" >
+                                <img src="t20.jpg">
+
+                                <h3>History scripted as India capture T20 World Cup crown</h3>
+
+                                <p class="news" >
+                                India made history in Ahmedabad by defeating New Zealand by 96 runs to become the first-ever three-time T20 World Cup champions and the first to successfully defend the title.New Zealand were blown away by the power-packed Indian batting line-up, who posted 255/5, the highest total at a T20 World Cup final. In response, the Black Caps folded at 159 in 19 overs.
+                                </p>
+
+
+                          <div class="actions">
+
+
+                                <i class="fa-regular fa-heart " onclick="likeNews(this)" ></i>
+                                <i class="fa-solid fa-share-nodes"  onclick="shareNews()"></i>
+                                <i class="fa-solid fa-bookmark" onclick="saveNews(this)"></i>
+                                <a href="https://www.icc-cricket.com/tournaments/mens-t20-world-cup-2026/news/live-india-new-zealand-chase-world-cup-glory"
+                                  type="button" class="btn btn-outline-success rm">Read More</a>
+                          </div> 
+                           <button  class="ai-btn" onclick="getSummary(this)" style="background: linear-gradient(90deg,#ff7f50 , #d62828); color: white; border: none; padding: 8px 16px; border-radius: 2rem; cursor: pointer; font-weight: bold;">🧠 Summary</button>
+
+                            <p class="summary"></p>
+
+
+
+                          <div class="comment-box">
+
+                                <input type="text" placeholder="Write comment..." onkeypress="handleComment(event, this)">
+
+                                <div class="comments"></div>
+
+                          </div>
+
+                        </div> 
+
+
+
+                        <!-- CARD 7 -->
+
+                         <div class="card" data-category="live" >
+                                <img src="nh7.png">
+
+                                <h3>US Iran war talks LIVE</h3>
+
+                                <p class="news" >US-Iran war talks LIVE: Donald Trump reacted to news reports that China is preparing to ship weapons to Iran. "I doubt they would do that... but if we catch them doing that, they get a 50% tariff, which is a staggering amount," he told Fox News.</p>
+
+
+                          <div class="actions">
+
+
+                                <i class="fa-regular fa-heart " onclick="likeNews(this)" ></i>
+                                <i class="fa-solid fa-share-nodes"  onclick="shareNews()"></i>
+                                <i class="fa-solid fa-bookmark" onclick="saveNews(this)"></i>
+                                <a href="https://www.hindustantimes.com/world-news/us-iran-war-islamabad-talks-live-updates-strait-of-hormuz-nuclear-weapon-israel-lebanon-strike-trump-vance-latest-news-101775964945903.html"
+                                  type="button" class="btn btn-outline-success rm">Read More</a>
+                          </div> 
+                           <button  class="ai-btn" onclick="getSummary(this)" style="background: linear-gradient(90deg,#ff7f50 , #d62828); color: white; border: none; padding: 8px 16px; border-radius: 2rem; cursor: pointer; font-weight: bold;">🧠 Summary</button>
+
+                            <p class="summary"></p>
+
+
+
+                          <div class="comment-box">
+
+                                <input type="text" placeholder="Write comment..." onkeypress="handleComment(event, this)">
+
+                                <div class="comments"></div>
+
+                          </div>
+
+                        </div>
+
+    </section>
+    
+     <!-- FOOTER -->
+
+    <footer class="footer">
+  <div class="footer-container">
+
+    <!-- About -->
+    <div class="footer-col">
+      <h2 class="footer-logo">News Times</h2>
+      <p>Your trusted news source delivering latest updates from India and around the world.</p>
+      <div class="social-icons">
+        <a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://x.com/?lang=en-in"><i class="fab fa-twitter"></i></a>
+        <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.youtube.com/"><i class="fab fa-youtube"></i></a>
+      </div>
+    </div>
+
+    <!-- Quick Links -->
+    <div class="footer-col">
+      <h3>Quick Links</h3>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Latest News</a></li>
+        <li><a href="#">Trending</a></li>
+        <li><a href="#">Contact Us</a></li>
+        <li><a href="#">Privacy Policy</a></li>
+      </ul>
+    </div>
+
+    <!-- Categories -->
+    <div class="footer-col">
+      <h3>Categories</h3>
+      <ul>
+        <li><a href="#">India</a></li>
+        <li><a href="#">World</a></li>
+        <li><a href="#">Sports</a></li>
+        <li><a href="#">Education</a></li>
+        <li><a href="#">Live TV</a></li>
+      </ul>
+    </div>
+
+    <!-- Newsletter -->
+    <div class="footer-col">
+      <h3>Subscribe Channel</h3>
+      <p>Get daily updates directly in your inbox.</p>
+      <div class="newsletter">
+        <input type="email" placeholder="Enter your email">
+        <button>Subscribe</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <!-- © 2026 News Times | All Rights Reserved -->
+     Om Sonawane &hearts;
+  </div>
+</footer>
+
+
+
+
+    <script src="nh.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+  </body>
+</html>
+
+
+ 
